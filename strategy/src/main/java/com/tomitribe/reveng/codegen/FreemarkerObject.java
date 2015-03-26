@@ -121,13 +121,13 @@ public class FreemarkerObject {
 //            implementz += "some.Interface";
 //        }
 
-        if (implementz.length() > 0) {
-            implementz += ",";
-        } else {
-            implementz += " implements ";
-        }
-
-        implementz += "com.tomitribe.reveng.dao.BasicEntity";
+//        if (implementz.length() > 0) {
+//            implementz += ",";
+//        } else {
+//            implementz += " implements ";
+//        }
+//
+//        implementz += "com.tomitribe.reveng.dao.BasicEntity";
 
         return implementz;
     }

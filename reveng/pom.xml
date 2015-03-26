@@ -40,6 +40,11 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
+      <artifactId>hibernate-dao</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
       <artifactId>hibernate-strategy</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -98,11 +103,15 @@
             <!--<hbm2ddl export="false" format="true" outputfilename="database.ddl"></hbm2ddl>-->
             <!--</hibernatetool>-->
 
-
             <hibernatetool destdir="${project.basedir}/src/main/java">
 
               <jdbcconfiguration configurationfile="src/main/resources/postgresql.generator.cfg.xml" revengfile="src/main/resources/hbm2java.postgresql.xml"
                                  reversestrategy="com.tomitribe.reveng.codegen.DefaultStrategy"/>
+
+              <classpath>
+                <!--suppress MavenModelInspection -->
+                <pathelement path="${maven_test_classpath}"/>
+              </classpath>
 
               <!--&lt;!&ndash;hbm2hbmxml destdir="${basedir}/DAO/hbm"//&ndash;&gt;-->
               <!--<hbm2hbmxml />-->
@@ -117,7 +126,7 @@
               <!--<configuration configurationfile="target/hbm/hibernate.cfg.xml" />-->
               <!--</hbm2java>-->
 
-              <hbmtemplate templateprefix="target/classes/" template="template/Pojo.ftl" filepattern="{package-name}/{class-name}.java">
+              <hbmtemplate templateprefix="" templatepath="target/classes" template="template/Pojo.ftl" filepattern="{package-name}/{class-name}.java">
 
                 <property key="jdk5" value="true"/>
                 <property key="ejb3" value="true"/>

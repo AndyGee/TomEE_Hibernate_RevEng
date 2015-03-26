@@ -64,7 +64,8 @@ public class DefaultStrategy extends AbstractStrategy {
         } else if (REPORT.contains(name)) {
             name = (NS_REPORT + name);
         } else {
-            throw new IllegalArgumentException("Strategy.tableToClassName - Unknown table name: " + name);
+            //throw new IllegalArgumentException("Strategy.tableToClassName - Unknown table name: " + name);
+            name = "com.tomitribe.reveng.dao." + name;
         }
 
         name += "Entity";

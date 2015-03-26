@@ -39,12 +39,6 @@ public class PostgreSQLMetaDataDialect extends JDBCMetaDataDialect {
 
     private static final Logger log = LoggerFactory.getLogger(PostgreSQLMetaDataDialect.class);
 
-    ReverseEngineeringRuntimeInfo info;
-
-    public void configure(final ReverseEngineeringRuntimeInfo info) {
-        this.info = info;
-    }
-
     private Integer getDataType(final Map map, int type) {
 
         log.debug("Type(" + type + ") : " + map.toString());

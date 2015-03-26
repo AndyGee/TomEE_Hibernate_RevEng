@@ -33,6 +33,7 @@
   
   <modules>
   <module>reveng</module>
+  <module>dao</module>
   <module>strategy</module>
   </modules>
 
