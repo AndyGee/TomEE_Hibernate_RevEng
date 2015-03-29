@@ -3,7 +3,7 @@ ${pojo.getExtraClassCode()}
 </#if>
 @Override
 public int hashCode() {
-return (null != this.id ? this.id.hashCode() : super.hashCode());
+return (int)this.id;
 }
 
 @Override
@@ -12,5 +12,5 @@ if (this == o) return true;
 if (null == o || getClass() != o.getClass()) return false;
 
 final ${pojo.getDeclarationName()} that = (${pojo.getDeclarationName()}) o;
-return !(null != this.id ? !this.id.equals(that.id) : null != that.id);
+return this.id == that.id;
 }

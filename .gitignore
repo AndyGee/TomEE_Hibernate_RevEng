@@ -73,3 +73,15 @@ release.properties
 dependency-reduced-pom.xml
 
 
+.settings
+.project
+.classpath
+/dao/src/main/java/com/tomitribe/reveng/dao/AddressEntity.java
+/dao/src/main/java/com/tomitribe/reveng/dao/LoginEntity.java
+/dao/src/main/java/com/tomitribe/reveng/dao/MilestoneEntity.java
+/dao/src/main/java/com/tomitribe/reveng/dao/PersonEntity.java
+/dao/src/main/java/com/tomitribe/reveng/dao/PersonWithLockEntity.java
+/dao/src/main/java/com/tomitribe/reveng/dao/ProjectEntity.java
+/dao/src/main/java/com/tomitribe/reveng/dao/ProjectStatusTypeEntity.java
+/dao/src/main/java/com/tomitribe/reveng/dao/RelatedProjectAssnEntity.java
+/dao/src/main/java/com/tomitribe/reveng/dao/TeamMemberProjectAssnEntity.java
